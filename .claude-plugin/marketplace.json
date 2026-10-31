@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "instagram-nutri-skillPTBR",
+  "description": "Skills de Instagram para nutricionistas, em português, com checagem do Código de Ética do CFN",
+  "owner": {
+    "name": "Marcos de Paula Júnior",
+    "url": "https://github.com/mpjbiologo"
+  },
+  "plugins": [
+    {
+      "name": "instagram-nutri",
+      "description": "Catorze skills em português para o Instagram de nutricionistas, com nota de gancho, revisor de legenda, humanizador e checagem ética do CFN.",
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://github.com/mpjbiologo/instagram-nutri-skillPTBR"
+    }
+  ]
+}

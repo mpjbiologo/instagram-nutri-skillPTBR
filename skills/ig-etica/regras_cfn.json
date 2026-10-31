@@ -1,0 +1,119 @@
+{
+  "version": "1.0",
+  "fonte": "Resolução CFN nº 856/2026 (Código de Ética e Conduta da(o) Nutricionista)",
+  "note": "Regras usadas por etica.py. Baseadas no Código de Ética e Conduta da(o) Nutricionista, Resolução CFN nº 856, de 25/04/2026 (DOU 28/04/2026), que revoga a Resolução CFN nº 599/2018. A entrada em vigor do código novo teve o prazo prorrogado; até lá vale o de 2018, que já vedava antes/depois, promoções e sorteios. Confira a situação atual no site do CFN ou com seu CRN. Isto é uma ajuda de revisão automática e NÃO substitui a leitura do código nem orientação do CRN. Regex são heurísticas: dão falso positivo e falso negativo. Edite à vontade.",
+  "regras": [
+    {
+      "id": "antes-depois",
+      "nivel": "VEDADO",
+      "artigo": "Art. 69, §2º (Res. 856/2026); já vedado na Res. 599/2018",
+      "nome": "Antes e depois / evolução corporal",
+      "regex": "(?i)\\bantes\\s*(?:e|x|/|vs\\.?)\\s*depois\\b|\\b(?:transforma[cç][aã]o|evolu[cç][aã]o|resultado)\\s+d[aoe]s?\\s+(?:minha |meu |nossa |nosso )?(?:paciente|aluna|aluno|cliente)s?\\b",
+      "correcao": "Não mostre resultado corporal (fotos, medidas, peso), nem seu, nem de paciente, nem gerado por IA, mesmo com autorização. Antes/depois de PRATO, rotina ou geladeira pode."
+    },
+    {
+      "id": "composicao-exames",
+      "nivel": "VEDADO",
+      "artigo": "Art. 69, §2º",
+      "nome": "Composição corporal, exames ou gráficos de resultado",
+      "regex": "(?i)\\b(?:bioimped[aâ]ncia|%\\s*de gordura|percentual de gordura|massa magra|dobras cut[aâ]neas|adip[oô]metro)\\b[^.!?\\n]{0,60}\\b(?:caiu|baixou|subiu|ganhou|perdeu|foi de|passou de|reduziu|aumentou)\\b|\\b(?:glicemia|colesterol|triglicer[ií]deos|hemoglobina glicada|ferritina|vitamina d)\\b[^.!?\\n]{0,40}\\b(?:caiu|baixou|foi de|passou de|normalizou|zerou)\\b",
+      "correcao": "Resultado de exame ou composição corporal não pode ser divulgado para fins de divulgação profissional. Em contexto técnico-científico (aula, evento, artigo) é possível, sem identificar a pessoa."
+    },
+    {
+      "id": "promessa-kg",
+      "nivel": "VEDADO",
+      "artigo": "Art. 69, §2º e §6º",
+      "nome": "Promessa ou exibição de resultado (kg, cm, prazo)",
+      "regex": "(?i)\\b(?:perca|perder|perdeu|perdi|perderam|elimine|eliminar|eliminou|eliminei|emagre[cç]a|emagrecer|emagreceu|emagreci|seque|secar|secou|sequei|desinche|desinchar|derreta|queime)\\b[^.!?\\n]{0,30}\\b\\d+[\\d,.]*\\s*(?:kg|quilos?|cm|%|libras?)\\b|\\b(?:em|at[eé]) (?:apenas |s[oó] )?\\d+\\s*(?:dias|semanas|meses)\\b[^.!?\\n]{0,30}\\b(?:emagre|perd|sec|elimin|desinch)\\w*",
+      "correcao": "Não prometa nem exiba resultado corporal (seu ou de paciente). Troque por uma informação verificável (o que o alimento tem, como funciona, o que a ciência diz)."
+    },
+    {
+      "id": "garantia",
+      "nivel": "VEDADO",
+      "artigo": "Art. 69, §6º",
+      "nome": "Garantia de resultado",
+      "regex": "(?i)\\b(?:resultado garantido|garantid[oa]s?|garanto|100%\\s*(?:garantido|eficaz|efetivo)|resultado certo|funciona sempre|sem falha|infal[ií]vel)\\b",
+      "correcao": "Nenhum método garante resultado. Diga o que costuma ajudar e para quem."
+    },
+    {
+      "id": "milagre",
+      "nivel": "ATENCAO",
+      "artigo": "Art. 69 e 70 (rigor técnico-científico, não induzir a erro)",
+      "nome": "Linguagem de milagre ou cura",
+      "regex": "(?i)\\b(?:milagr\\w*|f[oó]rmula m[aá]gica|segredo (?:para|pra) emagrecer|cura(?:r|m)?\\b|derrete(?:r)? (?:a )?gordura|queima(?:r)? gordura|acelera(?:r)? o metabolismo|detox|desintoxica\\w*|desinflama\\w*|zero barriga|barriga chapada|seca(?:r)? (?:a )?barriga)",
+      "correcao": "Termos assim prometem efeito que a evidência não sustenta. Use a linguagem do mecanismo real e cite a fonte."
+    },
+    {
+      "id": "promocao-sorteio",
+      "nivel": "VEDADO",
+      "artigo": "Art. 68, III (Res. 856/2026); Art. 57 da Res. 599/2018",
+      "nome": "Promoção, sorteio ou desconto como publicidade",
+      "regex": "(?i)\\b(?:sorteio|sorteando|sortear|promo[cç][aã]o|promocional|desconto|descontinho|black friday|cupom|% off|\\d+\\s*%\\s*de desconto|consulta (?:gr[aá]tis|gratuita)|primeira consulta (?:gr[aá]tis|gratuita|free)|leve \\d+ pague|[uú]ltimas vagas com|s[oó] hoje|imperd[ií]vel)\\b|R\\$\\s?\\d[\\d.,]*[^.!?\\n]{0,12}\\bpor\\s+(?:apenas\\s+|s[oó]\\s+)?R\\$\\s?\\d",
+      "correcao": "Divulgar preço pode; usar honorários, promoções e sorteios como propaganda não. Informe o valor de forma clara, sem chamariz."
+    },
+    {
+      "id": "preco",
+      "nivel": "LEMBRETE",
+      "artigo": "Art. 68",
+      "nome": "Preço de consulta divulgado",
+      "regex": "(?i)\\b(?:consulta|acompanhamento|plano|pacote|avalia[cç][aã]o|retorno)\\b[^.!?\\n]{0,40}R\\$\\s?\\d[\\d.,]*|R\\$\\s?\\d[\\d.,]*[^.!?\\n]{0,40}\\b(?:consulta|acompanhamento|plano|pacote)\\b",
+      "correcao": "Divulgar honorários é permitido, desde que sem termos que induzam a erro (\"só hoje\", \"imperdível\", \"de R$ X por R$ Y\")."
+    },
+    {
+      "id": "marca-publi",
+      "nivel": "ATENCAO",
+      "artigo": "Arts. 72, 74 e 77",
+      "nome": "Marca, publi, cupom ou patrocínio",
+      "regex": "(?i)(?:#publi\\b|#publicidade\\b|\\bpubli\\b|\\bpatrocinad\\w*|\\bparceria com\\b|\\bc[oó]digo (?:de desconto|promocional)\\b|\\buse (?:o )?(?:meu )?c[oó]digo\\b|\\blink (?:de|com) desconto\\b|\\bminha marca favorita\\b|\\ba melhor marca\\b)",
+      "correcao": "Associar sua imagem a marca de alimento, suplemento, fitoterápico, utensílio, laboratório ou farmácia é vedado, salvo exceções do Art. 74 (com declaração ostensiva de conflito de interesses). Em conteúdo educativo com embalagem, mostre mais de uma marca (Art. 72)."
+    },
+    {
+      "id": "suplemento",
+      "nivel": "LEMBRETE",
+      "artigo": "Arts. 69 e 74",
+      "nome": "Indicação de suplemento ou fitoterápico",
+      "regex": "(?i)\\b(?:whey|creatina|col[aá]geno|termog[eê]nic\\w*|cafe[ií]na em c[aá]psula|multivitam[ií]nic\\w*|[oô]mega[- ]?3|fitoter[aá]pic\\w*|ch[aá] (?:seca|emagrecedor)|cápsula|capsula)\\b",
+      "correcao": "Suplemento em post é conteúdo educativo, não prescrição. Não indique para todo mundo, não associe marca e deixe claro que a indicação é individual."
+    },
+    {
+      "id": "metodo-unico",
+      "nivel": "ATENCAO",
+      "artigo": "Art. 33 (pluralismo técnico-científico)",
+      "nome": "Método apresentado como único ou obrigatório",
+      "regex": "(?i)\\b(?:[uú]nic[oa] (?:jeito|forma|m[eé]todo|dieta|maneira|caminho)|s[oó] funciona (?:se|com)|a [uú]nica (?:coisa|sa[ií]da)|m[eé]todo exclusivo|o melhor m[eé]todo)\\b",
+      "correcao": "O código veda apresentar uma abordagem como exclusiva ou obrigatória. Fale em 'uma estratégia que funciona para muita gente'."
+    },
+    {
+      "id": "terrorismo",
+      "nivel": "ATENCAO",
+      "artigo": "Art. 70 (educação crítica e contextualizada)",
+      "nome": "Terrorismo alimentar",
+      "regex": "(?i)\\b(?:veneno|venenoso|nunca mais coma|proibid[oa] (?:comer|na dieta)|corte (?:totalmente|de vez) o|vil[aã]o d[ao]|t[oó]xico)\\b",
+      "correcao": "Contexto e dose. Demonizar alimento sem evidência fere o dever de educação em saúde crítica e baseada em ciência."
+    },
+    {
+      "id": "paciente-identificavel",
+      "nivel": "ATENCAO",
+      "artigo": "Sigilo profissional e LGPD (Art. 36 para dados em tecnologia)",
+      "nome": "Paciente possivelmente identificável",
+      "regex": "(?i)\\b(?:minha|meu|a|o) (?:paciente|cliente|aluna|aluno)\\s+[A-ZÀ-Ý][a-zà-ÿ]+\\b|\\b(?:paciente|cliente)\\s+de\\s+\\d+\\s+anos\\b[^.!?\\n]{0,40}\\b(?:que mora|de Ita[uú]na|daqui)\\b",
+      "correcao": "Não use nome, idade + cidade, foto ou detalhe que identifique paciente. Histórias de consultório só anonimizadas."
+    },
+    {
+      "id": "depoimento",
+      "nivel": "LEMBRETE",
+      "artigo": "Art. 69 (confirme com o CRN)",
+      "nome": "Depoimento de paciente",
+      "regex": "(?i)\\b(?:depoimento|feedback d[aeo] (?:paciente|cliente)|olha o que (?:a|o) (?:paciente|cliente)|print d[aeo] (?:paciente|conversa))\\b",
+      "correcao": "Depoimento sem foto, medida, peso ou exame tende a ser aceito, mas é zona cinzenta. Sem números de resultado corporal e sem identificar a pessoa. Na dúvida, consulte o CRN-9."
+    }
+  ],
+  "ia": {
+    "nivel": "LEMBRETE",
+    "artigo": "Art. 37 (Res. 856/2026)",
+    "nome": "Uso de IA não declarado",
+    "regex_declaracao": "(?i)\\b(?:com (?:aux[ií]lio|ajuda|apoio) d[ae] (?:ia|intelig[eê]ncia artificial)|feito com (?:ia|intelig[eê]ncia artificial)|produzido com (?:ia|intelig[eê]ncia artificial)|#(?:feitocomia|conteudocomia|ia)\\b|texto revisado com ia|criado com (?:ia|intelig[eê]ncia artificial))",
+    "correcao": "O código pede que comunicações e materiais produzidos com IA indiquem esse uso. Uma linha no fim resolve: \"Roteiro feito com apoio de IA e revisado por mim.\"",
+    "imagem": "Imagem, vídeo ou áudio gerado por IA que simule pessoa real ou resultado clínico é vedado (Art. 38 e Art. 69 §4º)."
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "version": "1.0-ptbr",
+  "total": 100,
+  "note": "Treze itens, 100 pontos, adaptados para perfil de nutricionista. Dê nota com honestidade: nota generosa não ajuda ninguém, e a maioria dos perfis fica entre 30 e 40 na primeira avaliação. O peso é proposital: o campo de nome, a primeira linha da bio e os três fixados valem mais que a foto, porque são o que um estranho vindo de um Reel processa antes de decidir seguir. O item de conformidade ética zera se houver antes/depois corporal, promessa de resultado ou promoção no perfil.",
+  "items": [
+    {
+      "id": "campo_nome",
+      "points": 11,
+      "full_marks": "O campo de nome (30 caracteres, a linha em negrito, não o @) traz o nome e o que a pessoa busca: 'Marcos | Nutricionista Itaúna'. Esse campo entra na busca do Instagram e quase todo mundo gasta só com o nome.",
+      "common_fail": "Só o nome, ou nome com emoji."
+    },
+    {
+      "id": "bio_primeira_linha",
+      "points": 11,
+      "full_marks": "A primeira linha diz para quem é e o que muda para essa pessoa, nas palavras dela ('Emagrecimento sem cortar o arroz e o feijão'). Não é cargo, não é lista de adjetivos, não são três emojis separados por barra.",
+      "common_fail": "'Nutricionista | Apaixonada por saúde | Mãe de pet'."
+    },
+    {
+      "id": "bio_corpo",
+      "points": 7,
+      "full_marks": "O resto dos 150 caracteres traz uma prova verificável (formação, anos de atendimento, especialidade) ou uma oferta clara (presencial em tal cidade + online), escrito como frase.",
+      "common_fail": "Sopa de palavras-chave, ou espaço vazio."
+    },
+    {
+      "id": "crn_identificacao",
+      "points": 6,
+      "full_marks": "Nome profissional e número do CRN visíveis no perfil (bio ou nome). É a forma de identificação profissional que o público e a fiscalização do CRN esperam. Transmite autoridade e evita confusão com influenciador.",
+      "common_fail": "CRN ausente, ou só no destaque."
+    },
+    {
+      "id": "fixados",
+      "points": 10,
+      "full_marks": "Três posts fixados com três funções diferentes: o melhor conteúdo educativo (prova de competência), a explicação mais clara de como funciona o atendimento, e a melhor apresentação da pessoa. Não os três com mais views por acaso.",
+      "common_fail": "Nada fixado, então o topo do grid é o que foi postado por último."
+    },
+    {
+      "id": "link",
+      "points": 7,
+      "full_marks": "Um destino que combina com o que a bio prometeu: WhatsApp de agendamento ou página de captação. Até cinco links são permitidos; mais de dois vira cardápio, e cardápio converte menos que uma porta.",
+      "common_fail": "Árvore de links com onze opções, ou nenhum link."
+    },
+    {
+      "id": "destaques",
+      "points": 7,
+      "full_marks": "Quatro a seis destaques com o nome das perguntas que um paciente faz: Como funciona, Consulta online, Onde atendo, Dúvidas, Sobre mim, Receitas. Capas consistentes. Nada de mais de um ano na frente.",
+      "common_fail": "'Aleatório', 'Vida', 'Favs', ou 14 destaques sem ordem."
+    },
+    {
+      "id": "grid",
+      "points": 7,
+      "full_marks": "As nove primeiras capas são legíveis em miniatura e dizem do que é o perfil sem nenhum toque. Capas de Reel escolhidas de propósito, com até quatro palavras de texto.",
+      "common_fail": "Nove capas de rosto no meio de uma palavra, sem texto."
+    },
+    {
+      "id": "foto",
+      "points": 5,
+      "full_marks": "Rosto ocupando uns 60% do círculo, que aparece com uns 40 pixels. Olhos visíveis, foto dos últimos dois anos, fundo que não compete.",
+      "common_fail": "Foto de corpo inteiro, logo no lugar de rosto em marca pessoal, ou foto escura."
+    },
+    {
+      "id": "arroba",
+      "points": 5,
+      "full_marks": "Fácil de ler, fácil de falar em voz alta e igual nas outras redes. Sem underlines empilhados ou números no lugar de letras.",
+      "common_fail": "Um @ que ninguém consegue soletrar depois de ouvir uma vez."
+    },
+    {
+      "id": "categoria_contato",
+      "points": 5,
+      "full_marks": "Conta profissional com categoria 'Nutricionista' e botões de contato que funcionam (WhatsApp, e-mail conferido, endereço do consultório).",
+      "common_fail": "Conta pessoal, sem estatísticas e sem botão de contato."
+    },
+    {
+      "id": "atividade_recente",
+      "points": 9,
+      "full_marks": "Postou nos últimos sete dias e respondeu os comentários do post mais recente. Perfil que postou pela última vez em março parece fechado.",
+      "common_fail": "Cinco semanas sem postar, ou um paredão de comentários sem resposta."
+    },
+    {
+      "id": "conformidade_etica",
+      "points": 10,
+      "full_marks": "Nada no grid, nos destaques ou na bio que esbarre no Código de Ética: sem antes/depois corporal ou de exames, sem promessa de resultado, sem promoção/sorteio de consulta, sem associação a marca de suplemento sem declaração de conflito. Este item zera se houver qualquer um desses.",
+      "common_fail": "Destaque 'Resultados' com fotos de antes e depois de pacientes, ou post de 'consulta com 30% off'."
+    }
+  ]
+}

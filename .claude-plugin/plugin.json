@@ -1,0 +1,13 @@
+{
+  "name": "instagram-nutri",
+  "description": "Catorze skills em português para o Instagram de nutricionistas: Reels com 26 fórmulas de gancho e nota, mapa de tempos, legenda revisada contra o corte do feed, carrossel, stories, nota do perfil, plano semanal, comentários, respostas, DMs, reaproveitamento, auditoria, pesquisa de referências, humanizador e checagem do Código de Ética do CFN (Res. 856/2026).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Marcos de Paula Júnior",
+    "url": "https://github.com/mpjbiologo"
+  },
+  "homepage": "https://github.com/mpjbiologo/instagram-nutri-skillPTBR",
+  "repository": "https://github.com/mpjbiologo/instagram-nutri-skillPTBR",
+  "license": "MIT",
+  "keywords": ["instagram", "nutricao", "nutricionista", "reels", "conteudo", "cfn", "etica", "portugues"]
+}
