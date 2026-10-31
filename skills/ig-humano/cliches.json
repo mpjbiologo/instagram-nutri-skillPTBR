@@ -212,6 +212,11 @@
       "family": "verbos"
     },
     {
+      "find": "potencializa",
+      "replace": "melhora",
+      "family": "verbos"
+    },
+    {
       "find": "alavancar",
       "replace": "usar",
       "family": "verbos"
@@ -232,6 +237,11 @@
       "family": "verbos"
     },
     {
+      "find": "otimiza",
+      "replace": "melhora",
+      "family": "verbos"
+    },
+    {
       "find": "maximizar",
       "replace": "aumentar",
       "family": "verbos"
@@ -239,6 +249,11 @@
     {
       "find": "maximize",
       "replace": "aumente",
+      "family": "verbos"
+    },
+    {
+      "find": "maximiza",
+      "replace": "aumenta",
       "family": "verbos"
     },
     {
