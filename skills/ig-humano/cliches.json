@@ -523,7 +523,7 @@
     },
     {
       "find": "jornada",
-      "replace": "caminho",
+      "replace": "trajetória",
       "family": "substantivos"
     },
     {
